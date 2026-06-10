@@ -1,6 +1,6 @@
 export default {
     async fetch(request: Request) {
-        return Response.json({ time: Date.now() },
+        return Response.json({ time: process.hrtime.bigint() / 1000n; },
             {
                 headers:
                 {
